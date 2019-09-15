@@ -1,7 +1,10 @@
 package com.atguigu.gmall.user.mapper;
 
-import org.springframework.stereotype.Component;
+import com.atguigu.gmall.user.bean.UmsMember;
+import tk.mybatis.mapper.common.Mapper;
 
-@Component
-public class UserMapper {
+import java.util.List;
+
+public interface UserMapper extends Mapper<UmsMember> {
+    List<UmsMember> selectAllUser() ;
 }
